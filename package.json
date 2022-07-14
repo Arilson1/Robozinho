@@ -11,5 +11,9 @@
   "devDependencies": {
     "electron": "^19.0.8",
     "electron-rebuild": "^3.2.8"
+  },
+  "dependencies": {
+    "@types/node": "^18.0.4",
+    "electron-reload": "^2.0.0-alpha.1"
   }
 }

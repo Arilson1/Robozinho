@@ -1,5 +1,14 @@
-const openTicket = document.getElementById("openTicket");
+const { shell } = require('electron')
+const os = require('os')
 
-function getDataUser(){
-    
+const message = document.getElementById('message').value
+
+content = {
+    hostname: os.hostname(),
+    userinfo: os.userInfo(),
+    message: "" + message.value,
 }
+
+document.getElementById('openTicket').addEventListener('click', (event) => {
+    console.log(content)
+})
