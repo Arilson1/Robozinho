@@ -1,23 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Suporte Centro Médico</title>
-    <link rel="stylesheet" type="text/css" href="./styles.css">
-  </head>
-  <body>
-    <div id="app" class="app">
-        <h1>SUPORTE CENTRO MÉDICO</h1>
-        <textarea  id="message" cols="30" rows="10"></textarea>
-        <button id="openTicket">Chamar</button>
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <title>Suporte Centro Médico</title>
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+  <script defer src="functions.js"></script>
+</head>
+
+<body>
+  <div class="mainApp">
+    <div class="topBar">
+      <div class="titleBar">
+        <div class="title">
+          Suporte Centro Médico
+        </div>
+      </div>
+      <div class="titleBarBtns">
+        <button id="minimizeBtn" class="topBtn minimizeBtn" title="Minimize"></button>
+        <button id="maxResBtn" class="topBtn maximizeBtn" title="Maximize"></button>
+        <button id="closeBtn" class="topBtn closeBtn" title="Close"></button>
+      </div>
     </div>
-    <div id="grato" class="grato">
-        <h1>Obrigado!</h1>
-        <p>Já estamos trabalhando para solução do seu problema.</p>
-        <button id="close">Fechar</button>
-    </div>
-    <script src="./renderer.js"></script>
-  </body>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div id="app" class="app">
+    <img src="./images/HCTCO-2021.png" alt="" srcset="">
+    <h1>SUPORTE CENTRO MÉDICO</h1>
+    <textarea id="message" cols="30" rows="10"></textarea>
+    <button id="openTicket">Chamar</button>
+  </div>
+  <div id="grato" class="grato">
+    <h1>Obrigado!</h1>
+    <p>Já estamos trabalhando para solução do seu problema.</p>
+    <button id="close">Fechar</button>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+
 </html>
