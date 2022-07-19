@@ -1,4 +1,4 @@
-const { app, BrowserWindow, nativeImage ,ipcMain } = require("electron");
+const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
 const ipc = ipcMain;
 
@@ -8,21 +8,14 @@ require("electron-reload")(__dirname, {
   electron: require(`${__dirname}/node_modules/electron`),
 });
 
-// Função que cria uma janela desktop
 const createWindow = () => {
-    // Adicionando um ícone na barra de tarefas
-    const icon = nativeImage.createFromPath(`${app.getAppPath()}/images/HCTCO-2021.png`);
-    if (app.dock) {
-      app.dock.setIcon(icon);
-    }
-
   const win = new BrowserWindow({
-    icon,
+    icon: __dirname + "/build/icon.png",
     width: 1200,
     height: 680,
     minWidth: 940,
     minHeight: 560,
-    frame: true,
+    frame: false,
     webPreferences: {
       nodeIntegration: true, // habilita a integração do Node.js no FrontEnd
       contextIsolation: false,
@@ -31,7 +24,7 @@ const createWindow = () => {
     },
   });
 
-  win.loadFile("index.html");  // carrega a janela com o conteúdo dentro de index.html
+  win.loadFile("index.html"); // carrega a janela com o conteúdo dentro de index.html
   win.setBackgroundColor("#343B48");
 
   ipc.on("minimizeApp", () => {

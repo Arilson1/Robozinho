@@ -10,11 +10,11 @@ document.getElementById("minimizeBtn").addEventListener("click", () => {
 
 function changeMaxResBtn(isMaximizedApp) {
   if (isMaximizedApp) {
-    maxResBtn.title = "Restore";
+    maxResBtn.title = "Rest. Tamanho";
     maxResBtn.classList.remove("maximizeBtn");
     maxResBtn.classList.add("restoreBtn");
   } else {
-    maxResBtn.title = "Maximize";
+    maxResBtn.title = "Maximizar";
     maxResBtn.classList.remove("restoreBtn");
     maxResBtn.classList.add("maximizeBtn");
   }

@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="UTF-8">
-
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
   <title>Suporte Centro Médico</title>
   <link rel="stylesheet" type="text/css" href="./styles.css">
@@ -11,6 +10,8 @@
 </head>
 
 <body>
+
+  <!-- ===== LAYOUT ===== -->
   <div class="mainApp">
     <div class="topBar">
       <div class="titleBar">
@@ -19,22 +20,21 @@
         </div>
       </div>
       <div class="titleBarBtns">
-        <button id="minimizeBtn" class="topBtn minimizeBtn" title="Minimize"></button>
-        <button id="maxResBtn" class="topBtn maximizeBtn" title="Maximize"></button>
-        <button id="closeBtn" class="topBtn closeBtn" title="Close"></button>
+        <button id="minimizeBtn" class="topBtn minimizeBtn" title="Minimizar"></button>
+        <button id="maxResBtn" class="topBtn maximizeBtn" title="Maximizar"></button>
+        <button id="closeBtn" class="topBtn closeBtn" title="Fechar"></button>
       </div>
     </div>
   </div>
-  </div>
-  </div>
-  </div>
+
+  <!-- ===== CONTENT ===== -->
   <div id="app" class="app">
-    <img src="./images/HCTCO-2021.png" alt="" srcset="">
+    <img src="./images/HCTCO-2021.png" alt="">
     <h1>SUPORTE CENTRO MÉDICO</h1>
-    <textarea id="message" cols="30" rows="10"></textarea>
+    <textarea id="message" cols="30" rows="10" placeholder="Digite aqui seu problema para que possamos lhe ajudar"></textarea>
     <button id="openTicket">Chamar</button>
   </div>
-  <div id="grato" class="grato">
+  <div id="grato" class="grato" >
     <h1>Obrigado!</h1>
     <p>Já estamos trabalhando para solução do seu problema.</p>
     <button id="close">Fechar</button>

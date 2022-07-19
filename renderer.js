@@ -21,8 +21,6 @@ function horaAtual() {
     minutos = horario.getMinutes(),
     segundos = horario.getSeconds();
   return hora + "" + minutos + "" + segundos;
-  /*  const date = new Date().toLocaleString();
-  return date; */
 }
 
 function criarTicket() {
@@ -34,8 +32,6 @@ content = {
   mensagem: "",
   usuário: os.userInfo().username,
   nomenclatura: os.hostname(),
-  //data: dataAtualFormatada(),
-  //hora: horaAtual(),
 };
 
 document.getElementById("openTicket").addEventListener("click", (event) => {
